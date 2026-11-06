@@ -1,0 +1,365 @@
+<!doctype html><html lang="es" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><script>(function(){var t=null;try{t=localStorage.getItem('tema')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t})()</script><title>Campeonato TC Pista 2026</title><style>@font-face{font-family:Inter;font-weight:400;src:url(../fuentes/inter-400.woff2) format('woff2')}
+@font-face{font-family:Inter;font-weight:700;src:url(../fuentes/inter-700.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-weight:500;src:url(../fuentes/jbmono-500.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-weight:700;src:url(../fuentes/jbmono-700.woff2) format('woff2')}
+
+:root,html[data-theme=dark]{--bg:#0b1a2e;--card:#112440;--line:#1d3a5f;--tx:#e6edf6;--mut:#8aa0bd;--gold:#d4a84b;--blue:#4da3ff;
+  --head:#091524;--nav:#0d1f36;--hover:#17305a;--ctl:#17305a;--on:#0b1a2e}
+html[data-theme=light]{--bg:#f2f5f9;--card:#ffffff;--line:#d9e0ea;--tx:#141922;--mut:#6b7686;--gold:#b86e00;--blue:#1f6fd1;
+  --head:#ffffff;--nav:#eaeff6;--hover:#e8eef8;--ctl:#e6ecf4;--on:#ffffff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.45 Inter,'Segoe UI',system-ui,sans-serif}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+header{padding:16px 24px;border-bottom:1px solid var(--line);background:var(--head);display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+header h1{margin:0;font-size:22px;letter-spacing:.3px;font-weight:700}header h1 span{color:var(--gold)}
+header .sub{color:var(--mut);margin-top:4px;font-size:13px}
+.tg{white-space:nowrap}
+nav{display:flex;flex-wrap:wrap;gap:6px;padding:10px 24px;border-bottom:1px solid var(--line);background:var(--nav)}
+nav a{padding:4px 10px;border:1px solid var(--line);border-radius:6px;color:var(--tx);font-size:12px}
+nav a.on{background:var(--gold);color:var(--on);border-color:var(--gold);font-weight:700}
+main{padding:18px 24px;max-width:1400px;margin:auto}
+section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:18px}
+h2{margin:0 0 10px;font-size:13px;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold)}
+.note{color:var(--mut);font-size:12px;margin:0 0 10px}
+table{border-collapse:collapse;width:100%;font-size:12.5px}
+th,td{padding:4px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+td{font-family:'JetBrains Mono',Consolas,monospace;font-size:12px}
+th{color:var(--mut);font-weight:600;position:sticky;top:0;background:var(--card)}
+td.l,th.l{text-align:left}td.l{font-family:Inter,'Segoe UI',sans-serif;font-size:12.5px}tr:hover td{background:var(--hover)}
+.scroll{max-height:560px;overflow:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(520px,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:14px}
+.card h3{margin:0;font-size:16px}.card .lug{color:var(--mut);font-size:12px;margin-bottom:8px}
+.row{display:flex;gap:8px;align-items:center;padding:5px 0;border-top:1px solid var(--line)}
+.row b{width:150px;color:var(--mut);font-size:11px;letter-spacing:1px;text-transform:uppercase}
+.pill{padding:2px 9px;border:1px solid var(--line);border-radius:6px;font-size:12px;color:var(--tx)}
+.ctl{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:8px;color:var(--mut)}
+select,input{background:var(--ctl);color:var(--tx);border:1px solid var(--line);border-radius:6px;padding:3px 6px;font:inherit;max-width:100%}
+#met{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+button{background:var(--ctl);color:var(--tx);border:1px solid var(--line);border-radius:6px;padding:3px 10px;cursor:pointer;font:inherit}
+.sc .tw{max-height:560px;overflow-y:auto}
+.seg{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.seg button{padding:6px 16px;font-weight:700;font-size:14px}
+.seg button.on{background:var(--gold);color:var(--on);border-color:var(--gold)}
+.etq{color:var(--mut);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin:4px 0 6px;font-weight:600}
+details.pista{background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:10px}
+details.pista summary{cursor:pointer;padding:12px 16px;display:flex;gap:12px;align-items:baseline;list-style:none}
+details.pista summary::-webkit-details-marker{display:none}
+details.pista summary b{font-size:16px}details.pista summary span{color:var(--mut);font-size:12px}
+details.pista summary::before{content:'▸';color:var(--gold)}details.pista[open] summary::before{content:'▾'}
+details.pista .cuerpo{padding:0 16px 12px}
+.act{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+.vio{background:#7c3aed;color:#fff!important;border-radius:3px}
+.pg{background:#16a34a;color:#fff!important;border-radius:3px;font-weight:700}
+.sc th,.sc td{text-align:left}.sc td.p{font-family:Inter,'Segoe UI',sans-serif;font-size:13px}
+html[data-theme=dark] .sc .sx0{color:#f5c518}
+html[data-theme=dark] .sc .sx1{color:#ff8a3d}
+html[data-theme=dark] .sc .sx2{color:#4da3ff}
+html[data-theme=dark] .sc .sx3{color:#4cc38a}
+html[data-theme=dark] .sc .sx4{color:#d27bff}
+html[data-theme=dark] .sc .mc-C{color:#ff6b6b}
+html[data-theme=dark] .sc .mc-M{color:#5aa9ff}
+html[data-theme=dark] .sc .mc-Y{color:#3cd6c8}
+html[data-theme=dark] .sc .mc-B{color:#4cc38a}
+html[data-theme=dark] .sc .mc-G{color:#b388ff}
+html[data-theme=dark] .sc .mc-T{color:#ffa94d}
+html[data-theme=dark] .sc .mc-W{color:#f0b429}
+
+html[data-theme=dark] .sc{background:#11161f;border:1px solid #222b3a;border-radius:10px;padding:12px 14px;color:#e6edf3;
+    font-family:Inter,'Segoe UI',sans-serif;margin-bottom:12px}
+html[data-theme=dark] .sc .num,.sc td.t,.sc .sc-pct{font-family:'JetBrains Mono',Consolas,monospace;font-variant-numeric:tabular-nums}
+html[data-theme=dark] .sc-head{display:flex;align-items:center;gap:14px;padding-bottom:10px;border-bottom:1px solid #222b3a}
+html[data-theme=dark] .sc-id{font-size:34px;font-weight:800;line-height:1}
+html[data-theme=dark] .sc-dom{flex:1;min-width:0}
+html[data-theme=dark] .sc-lbl{font-size:10px;letter-spacing:1.4px;color:#7d8a9c;font-weight:600}
+html[data-theme=dark] .sc-name{font-size:15px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+html[data-theme=dark] .sc-best{font-size:12px;color:#ff9a3c;font-weight:600}
+html[data-theme=dark] .sc-peso{text-align:right}
+html[data-theme=dark] .sc-pct{font-size:24px;font-weight:700;color:#a3e635}
+html[data-theme=dark] .sc table{width:100%;border-collapse:collapse;margin-top:6px;font-size:13px;table-layout:fixed}
+html[data-theme=dark] .sc td.p{overflow:hidden;text-overflow:ellipsis}
+html[data-theme=dark] .sc th{color:#7d8a9c;font-size:10px;letter-spacing:1.2px;font-weight:600;text-align:left;padding:6px 6px}
+html[data-theme=dark] .sc th{background:#11161f}
+html[data-theme=dark] .sc td{padding:5px 6px;border-bottom:1px solid #222b3a;white-space:nowrap}
+html[data-theme=dark] .sc tr.hi td{background:rgba(255,154,60,.16);color:#ff9a3c;font-weight:700}
+html[data-theme=dark] .sc tr.hi td:first-child{box-shadow:inset 3px 0 0 #ff9a3c}
+html[data-theme=dark] .sc .pos{display:inline-block;min-width:24px;text-align:center;border-radius:5px;background:#161c27;padding:1px 6px;font-weight:700;
+    font-size:12px;color:#7d8a9c}
+html[data-theme=dark] .sc tr.hi .pos{background:#ff9a3c;color:#fff}
+html[data-theme=dark] .sc .tb{display:inline-block;min-width:34px;text-align:center;border-radius:5px;background:#161c27;padding:1px 6px;font-size:11px;
+    font-weight:700;color:#7d8a9c}
+html[data-theme=dark] .sc td.t{font-weight:600;color:#a3e635}
+html[data-theme=dark] .sc td.t.best{background:#7c3aed;color:#fff;border-radius:3px}
+html[data-theme=dark] .sc td.d{color:#ff6b6b;text-align:right;font-family:'JetBrains Mono',Consolas,monospace}
+html[data-theme=dark] .sc td.m{font-weight:800;text-align:center}
+html[data-theme=dark] .sc .ref{color:#7d8a9c}
+
+html[data-theme=light] .sc .sx0{color:#b88a00}
+html[data-theme=light] .sc .sx1{color:#e0661a}
+html[data-theme=light] .sc .sx2{color:#1f6fd1}
+html[data-theme=light] .sc .sx3{color:#16965f}
+html[data-theme=light] .sc .sx4{color:#9333ea}
+html[data-theme=light] .sc .mc-C{color:#dc2626}
+html[data-theme=light] .sc .mc-M{color:#1f6fd1}
+html[data-theme=light] .sc .mc-Y{color:#0d9488}
+html[data-theme=light] .sc .mc-B{color:#16965f}
+html[data-theme=light] .sc .mc-G{color:#7c3aed}
+html[data-theme=light] .sc .mc-T{color:#d9650b}
+html[data-theme=light] .sc .mc-W{color:#b88a00}
+
+html[data-theme=light] .sc{background:#ffffff;border:1px solid #d9e0ea;border-radius:10px;padding:12px 14px;color:#141922;
+    font-family:Inter,'Segoe UI',sans-serif;margin-bottom:12px}
+html[data-theme=light] .sc .num,.sc td.t,.sc .sc-pct{font-family:'JetBrains Mono',Consolas,monospace;font-variant-numeric:tabular-nums}
+html[data-theme=light] .sc-head{display:flex;align-items:center;gap:14px;padding-bottom:10px;border-bottom:1px solid #d9e0ea}
+html[data-theme=light] .sc-id{font-size:34px;font-weight:800;line-height:1}
+html[data-theme=light] .sc-dom{flex:1;min-width:0}
+html[data-theme=light] .sc-lbl{font-size:10px;letter-spacing:1.4px;color:#6b7686;font-weight:600}
+html[data-theme=light] .sc-name{font-size:15px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+html[data-theme=light] .sc-best{font-size:12px;color:#d9650b;font-weight:600}
+html[data-theme=light] .sc-peso{text-align:right}
+html[data-theme=light] .sc-pct{font-size:24px;font-weight:700;color:#15803d}
+html[data-theme=light] .sc table{width:100%;border-collapse:collapse;margin-top:6px;font-size:13px;table-layout:fixed}
+html[data-theme=light] .sc td.p{overflow:hidden;text-overflow:ellipsis}
+html[data-theme=light] .sc th{color:#6b7686;font-size:10px;letter-spacing:1.2px;font-weight:600;text-align:left;padding:6px 6px}
+html[data-theme=light] .sc th{background:#ffffff}
+html[data-theme=light] .sc td{padding:5px 6px;border-bottom:1px solid #d9e0ea;white-space:nowrap}
+html[data-theme=light] .sc tr.hi td{background:rgba(217,101,11,.12);color:#d9650b;font-weight:700}
+html[data-theme=light] .sc tr.hi td:first-child{box-shadow:inset 3px 0 0 #d9650b}
+html[data-theme=light] .sc .pos{display:inline-block;min-width:24px;text-align:center;border-radius:5px;background:#f3f6fa;padding:1px 6px;font-weight:700;
+    font-size:12px;color:#6b7686}
+html[data-theme=light] .sc tr.hi .pos{background:#d9650b;color:#fff}
+html[data-theme=light] .sc .tb{display:inline-block;min-width:34px;text-align:center;border-radius:5px;background:#f3f6fa;padding:1px 6px;font-size:11px;
+    font-weight:700;color:#6b7686}
+html[data-theme=light] .sc td.t{font-weight:600;color:#15803d}
+html[data-theme=light] .sc td.t.best{background:#7c3aed;color:#fff;border-radius:3px}
+html[data-theme=light] .sc td.d{color:#dc2626;text-align:right;font-family:'JetBrains Mono',Consolas,monospace}
+html[data-theme=light] .sc td.m{font-weight:800;text-align:center}
+html[data-theme=light] .sc .ref{color:#6b7686}
+
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.tabs button{padding:8px 16px;font-weight:700}
+.tabs button.on,.seg button.on{background:var(--gold);color:var(--on);border-color:var(--gold)}
+.bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.bar label,.bar .lb{color:var(--mut);font-size:12px}
+.hint{color:var(--mut);font-size:12px}
+.blbl{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;opacity:.75}
+td.l,th.l{text-align:left}
+tr.sg td{background:color-mix(in srgb,var(--gold) 16%,transparent)}
+tr.sg td:first-child{box-shadow:inset 3px 0 0 var(--gold)}
+.st{cursor:pointer;border:none;background:none;color:var(--mut);font-size:15px;padding:0 4px}.st.on{color:var(--gold)}
+.up{color:#4cc38a;font-weight:700}.dn{color:#ef6b6b;font-weight:700}.eq0{color:var(--mut)}
+.camp{border:2px solid var(--gold);border-radius:8px;padding:8px 12px;margin:8px 0;background:var(--card)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:16px;align-items:start}
+@media(max-width:560px){.grid2{grid-template-columns:1fr}}
+.pl{display:flex;flex-wrap:wrap;gap:4px;margin:6px 0;max-height:150px;overflow:auto}
+.pl button{padding:3px 7px;font-size:12px}
+.ord{margin:6px 0;max-height:520px;overflow:auto}
+.ord .r{display:grid;grid-template-columns:34px 1fr auto auto;gap:6px;align-items:center;padding:3px 4px;border-bottom:1px solid var(--line)}
+.ord .r b{font-family:'JetBrains Mono',monospace}
+.ord button{padding:1px 8px}.ord input{width:46px}
+textarea{width:100%;min-height:46px;background:var(--ctl);color:var(--tx);border:1px solid var(--line);border-radius:6px;padding:6px;font:inherit}
+.pts td:nth-child(n+2),.pts th:nth-child(n+2){text-align:center}
+.dim{color:var(--mut)}
+.dd{position:relative;display:inline-block}
+.dd summary{list-style:none;cursor:pointer;background:var(--ctl);color:var(--tx);border:1px solid var(--line);border-radius:6px;padding:8px 32px 8px 12px;min-width:280px;position:relative;font-size:15px}
+.dd summary::-webkit-details-marker{display:none}
+.dd summary::after{content:'';position:absolute;right:12px;top:50%;width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-70%) rotate(45deg)}
+.dd[open] summary::after{transform:translateY(-30%) rotate(225deg)}
+.dd .chips{position:absolute;left:0;top:calc(100% + 4px);z-index:30;width:360px;max-width:90vw;border:1px solid var(--line);border-radius:8px;background:var(--card);box-shadow:0 8px 24px rgba(0,0,0,.35);padding:8px}
+.dd .chips input[type=text],.dd .chips input:not([type]){width:100%;box-sizing:border-box;font-size:15px;padding:8px;margin-bottom:6px}
+#ddl{max-height:320px;overflow:auto}
+.dd .it{display:flex;gap:8px;align-items:center;padding:3px 4px;border-radius:5px;font-size:14px;cursor:pointer}.dd .it:hover{background:var(--hover)}
+.bar select,.bar button,.bar input[type=number]{font-size:15px}
+.emb header,.emb .tabs{display:none}.emb main{padding-top:0}
+@page{size:A4 landscape;margin:10mm}
+@media print{header,.tabs,.nop,.seg{display:none!important}body{background:#fff}main{max-width:none;padding:0}}
+</style></head><body>
+<header><div><h1>CAMPEONATO · <span>TC Pista 2026</span></h1><div class="sub">General, Copa, puntaje por instancia y herramienta en vivo para la carrera</div></div>
+<div class="bar"><a class="pill" href="../index.html">← Índice</a><button class="tg" onclick="cambiarTema()">◐ Claro / oscuro</button></div></header>
+<main><div class="tabs" id="tabs"></div><div id="panel"></div></main>
+<script>
+function recolorear(){if(!window.Plotly)return;var d=document.documentElement.dataset.theme==='dark',c=d?'#e6edf6':'#141922',g=d?'#1d3a5f':'#d9e0ea';
+ document.querySelectorAll('.js-plotly-plot').forEach(function(gd){if(!gd.layout)return;var u={'font.color':c};
+  Object.keys(gd.layout).forEach(function(k){if(/^(x|y)axis\d*$/.test(k)){u[k+'.gridcolor']=g;u[k+'.zerolinecolor']=g}});Plotly.relayout(gd,u)})}
+function cambiarTema(){var t=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=t;
+ try{localStorage.setItem('tema',t)}catch(e){}recolorear()}
+function csv(id,nombre){var f=[];document.querySelectorAll('#'+id+' tr').forEach(function(tr){f.push([].map.call(tr.children,function(c){
+ return '"'+c.textContent.replace(/"/g,'""')+'"'}).join(';'))});var b=new Blob(['\ufeff'+f.join('\n')],{type:'text/csv;charset=utf-8'});
+ var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=nombre+'.csv';a.click()}
+window.addEventListener('load',function(){if(document.documentElement.dataset.theme==='light')recolorear()});
+</script><script>
+const D={"cat":"TCP","anio":2026,"total":14,"reg":10,"ncopa":4,"um":3,"bonus":200.0,"rec":1.5,"min":10,"copaNombre":"Copa de Plata","fechas":[{"n":1,"t":"15/02 El Calafate"},{"n":2,"t":"08/03 Viedma"},{"n":3,"t":"29/03 Neuquén"},{"n":4,"t":"19/04 Concepción del Uruguay"},{"n":5,"t":"10/05 Termas de Río Hondo"},{"n":6,"t":"31/05 Alta Gracia"},{"n":7,"t":"21/06 Rafaela"},{"n":8,"t":"12/07 Posadas"},{"n":9,"t":"02/08 San Juan"},{"n":10,"t":"23/08 AUTODROMO CIUDAD DE PARANA"},{"n":11,"t":"13/09 Circuito a Confirmar"},{"n":12,"t":"04/10 San Nicolás"},{"n":13,"t":"25/10 Rosario"}],"prox":{"n":14,"t":"15/11 Río Cuarto"},"P":[{"n":"99","p":"DAMIANI, BAUTISTA","f":{"13":[0.0,4.0,37.0],"12":[0.0,1.5,27.0],"11":[0.0,5.0,37.0],"10":[0.0,3.0,29.0],"9":[2.0,2.5,20.0],"8":[0.0,3.5,28.0],"7":[0.0,5.0,40.0],"6":[0.0,5.0,37.0],"5":[0.0,2.0,21.0],"4":[0.0,5.0,37.0],"3":[0.0,3.0,24.0],"2":[0.0,5.0,37.0],"1":[0.0,5.0,40.0]}},{"n":"10","p":"GANDULIA, GABRIEL","f":{"13":[0.0,1.0,29.0],"12":[0.0,5.0,37.0],"11":[0.0,4.5,19.0],"10":[0.0,4.0,28.0],"9":[0.0,5.0,37.0],"8":[0.0,4.0,26.0],"7":[0.0,4.0,20.0],"6":[0.0,4.0,29.0],"5":[0.0,5.0,34.0],"4":[0.0,1.5,29.0],"3":[0.0,3.0,20.0],"2":[0.0,5.0,40.0],"1":[0.0,4.5,26.0]}},{"n":"43","p":"ANTÓN, BENJAMÍN","f":{"13":[0.0,3.5,25.0],"12":[0.0,2.0,21.0],"11":[0.0,5.0,40.0],"10":[0.0,3.0,26.0],"9":[0.0,3.5,23.0],"8":[0.0,3.0,30.0],"7":[0.0,3.5,28.0],"6":[0.0,3.0,28.0],"5":[0.0,4.5,40.0],"4":[0.0,3.5,30.0],"3":[0.0,3.5,22.0],"2":[0.0,3.5,30.0],"1":[0.0,5.0,24.0]}},{"n":"123","p":"SANTILLI PAZOS, NICANOR","f":{"13":[0.0,2.5,23.0],"12":[0.0,2.5,23.0],"11":[0.0,1.0,25.0],"10":[0.0,5.0,40.0],"9":[0.0,2.0,30.0],"8":[0.0,3.5,21.0],"7":[0.0,3.5,29.0],"6":[0.0,2.5,26.0],"5":[0.0,4.5,30.0],"4":[2.0,4.5,31.0],"3":[0.0,2.5,28.0],"2":[0.0,4.5,34.0],"1":[2.0,2.5,28.0]}},{"n":"111","p":"OCHOA, BENJAMIN","f":{"13":[0.0,3.5,31.0],"12":[0.0,4.0,34.0],"11":[2.0,0.5,28.0],"10":[0.0,3.5,30.0],"9":[0.0,4.0,24.0],"8":[0.0,2.0,24.0],"7":[0.0,4.5,31.0],"6":[0.0,4.0,31.0],"5":[0.0,2.0,25.0],"4":[0.0,0.0,24.0],"3":[0.0,4.5,31.0],"2":[0.0,2.5,28.0],"1":[0.0,1.5,22.0]}},{"n":"67","p":"BIAGI, SANTIAGO","f":{"13":[0.0,3.0,30.0],"12":[0.0,4.0,18.0],"11":[0.0,1.0,26.0],"10":[0.0,2.5,21.0],"9":[0.0,1.5,18.0],"8":[0.0,4.0,31.0],"7":[0.0,1.0,27.0],"6":[0.0,5.0,40.0],"5":[0.0,1.5,20.0],"4":[0.0,4.0,28.0],"3":[0.0,5.0,40.0],"2":[2.0,4.5,21.0],"1":[0.0,3.0,31.0]}},{"n":"133","p":"BERNASCONI, FELIPE","f":{"13":[0.0,4.5,19.0],"12":[0.0,1.5,26.0],"11":[0.0,3.5,21.0],"10":[0.0,4.0,31.0],"9":[0.0,5.0,40.0],"8":[0.0,4.5,34.0],"7":[0.0,1.5,0.0],"6":[0.0,1.5,23.0],"5":[0.0,4.0,37.0],"4":[0.0,4.5,34.0],"3":[2.0,5.0,34.0],"2":[0.0,3.0,25.0],"1":[0.0,3.0,21.0]}},{"n":"44","p":"POZNER, THOMAS","f":{"13":[0.0,1.5,28.0],"12":[0.0,4.5,40.0],"11":[0.0,4.5,34.0],"10":[0.0,1.5,23.0],"9":[0.0,3.0,25.0],"8":[0.0,4.5,25.0],"7":[0.0,3.0,22.0],"6":[2.0,4.5,34.0],"5":[2.0,1.5,27.0],"4":[0.0,3.5,0.0],"3":[0.0,4.0,30.0],"2":[0.0,2.0,24.0],"1":[0.0,4.0,29.0]}},{"n":"105","p":"BORGERT, MANUEL","f":{"13":[0.0,2.0,26.0],"12":[0.0,4.5,30.0],"11":[0.0,3.0,31.0],"10":[0.0,2.5,27.0],"9":[0.0,2.5,29.0],"8":[0.0,5.0,37.0],"7":[0.0,4.5,30.0],"6":[0.0,2.0,27.0],"5":[0.0,3.0,26.0],"4":[0.0,2.0,25.0],"2":[0.0,3.5,19.0],"1":[0.0,4.5,37.0]}},{"n":"168","p":"GALLO, JUAN SEBASTIAN","f":{"13":[2.0,5.0,40.0],"12":[0.0,3.5,28.0],"11":[0.0,4.0,30.0],"10":[2.0,4.5,34.0],"9":[0.0,4.5,34.0],"8":[2.0,5.0,40.0],"7":[2.0,5.0,37.0],"6":[0.0,4.5,30.0],"5":[0.0,5.0,31.0],"4":[0.0,2.5,27.0]}},{"n":"144","p":"CIFRE, FAUSTINO","f":{"13":[0.0,2.5,22.0],"12":[0.0,3.5,29.0],"11":[0.0,1.5,29.0],"10":[0.0,3.5,20.0],"9":[0.0,4.5,28.0],"8":[0.0,3.0,27.0],"7":[0.0,1.0,26.0],"6":[0.0,3.5,19.0],"5":[0.0,2.5,22.0],"4":[0.0,3.0,23.0],"3":[0.0,2.0,26.0],"2":[0.0,4.0,29.0],"1":[0.0,3.5,25.0]}},{"n":"53","p":"PROVENS, EUGENIO","f":{"12":[2.0,5.0,17.0],"11":[0.0,2.5,18.0],"10":[0.0,5.0,37.0],"9":[0.0,1.5,0.0],"8":[0.0,2.5,29.0],"7":[0.0,4.0,34.0],"5":[0.0,4.0,23.0],"4":[0.0,5.0,40.0],"3":[0.0,4.5,37.0],"2":[0.0,1.5,26.0],"1":[0.0,4.0,34.0]}},{"n":"66","p":"TADEI, GUSTAVO (H)","f":{"13":[0.0,3.0,27.0],"12":[0.0,3.0,24.0],"11":[0.0,3.5,27.0],"9":[0.0,2.0,19.0],"8":[0.0,2.5,23.0],"7":[0.0,2.0,24.0],"6":[0.0,3.5,18.0],"5":[0.0,3.5,28.0],"4":[0.0,1.5,26.0],"3":[0.0,2.0,27.0],"2":[0.0,1.5,20.0],"1":[0.0,2.0,19.0]}},{"n":"59","p":"MACEIRA, JUAN IGNACIO","f":{"13":[0.0,2.0,21.0],"12":[0.0,2.5,31.0],"11":[0.0,1.5,0.0],"10":[0.0,4.5,22.0],"9":[0.0,3.0,26.0],"7":[0.0,1.5,21.0],"6":[0.0,2.5,22.0],"5":[0.0,3.5,24.0],"4":[0.0,4.0,20.0],"3":[0.0,4.0,23.0],"2":[0.0,3.0,27.0],"1":[0.0,2.0,27.0]}},{"n":"19","p":"COTIGNOLA, LUCIANO","f":{"13":[0.0,4.0,34.0],"11":[0.0,4.0,23.0],"9":[0.0,3.5,22.0],"6":[0.0,1.5,21.0],"5":[0.0,3.0,29.0],"4":[0.0,3.0,19.0],"3":[0.0,3.5,29.0],"2":[0.0,4.0,31.0],"1":[0.0,0.0,30.0]}},{"n":"31","p":"GUERRA, LUCAS","f":{"7":[0.0,3.0,25.0],"6":[0.0,3.0,24.0],"5":[0.0,2.5,19.0],"4":[0.0,2.5,21.0],"3":[0.0,2.5,21.0],"2":[0.0,2.5,23.0],"1":[0.0,3.5,20.0]}},{"n":"32","p":"SANDIN, JUAN ANTONIO","f":{"12":[0.0,0.5,20.0],"11":[0.0,0.5,20.0],"10":[0.0,1.0,16.0],"9":[0.0,0.5,27.0],"7":[0.0,2.0,18.0],"6":[0.0,0.5,20.0]}},{"n":"119","p":"LEDESMA, FACUNDO","f":{"10":[0.0,1.0,17.0],"9":[0.0,1.0,21.0],"8":[0.0,1.5,22.0],"7":[0.0,2.5,23.0],"6":[0.0,2.0,17.0]}},{"n":"176","p":"NICOLAS, JAIME","f":{"13":[0.0,4.5,20.0],"12":[0.0,2.0,19.0],"11":[0.0,2.5,24.0],"10":[0.0,2.0,24.0]}},{"n":"23","p":"ALEJANDRO, MARTINEZ","f":{"13":[0.0,1.0,24.0],"12":[0.0,1.0,22.0],"11":[0.0,2.5,22.0],"10":[0.0,1.5,19.0]}},{"n":"100","p":"REUTEMANN, IAN","f":{"13":[0.0,5.0,18.0],"10":[0.0,2.0,25.0],"9":[0.0,4.0,31.0]}},{"n":"139","p":"SANTIAGO, ARRIGONI","f":{"13":[0.0,1.5,17.0],"12":[0.0,1.0,25.0],"11":[0.0,2.0,17.0],"10":[0.0,0.5,18.0]}},{"n":"169","p":"QUEVEDO, BRAIAN","f":{"3":[0.0,1.5,25.0],"2":[0.0,2.0,22.0],"1":[0.0,2.5,23.0]}},{"n":"177","p":"DEMARCO, LUCA","f":{"7":[0.0,2.5,19.0],"6":[0.0,1.0,25.0]}},{"n":"69","p":"MIÓN, EDDY","f":{"12":[0.0,3.0,0.0],"4":[0.0,2.0,22.0]}}],"C":[{"n":"99","e":"clasificado","a":31.0},{"n":"168","e":"ultimo_minuto_provisorio","a":0.0},{"n":"44","e":"clasificado","a":0.0},{"n":"43","e":"clasificado","a":8.0},{"n":"10","e":"clasificado","a":8.0},{"n":"111","e":"clasificado","a":0.0},{"n":"67","e":"clasificado","a":16.0},{"n":"105","e":"clasificado","a":0.0},{"n":"66","e":"ultimo_minuto_provisorio","a":0.0},{"n":"144","e":"clasificado","a":0.0},{"n":"123","e":"clasificado","a":8.0},{"n":"133","e":"clasificado","a":8.0},{"n":"19","e":"ultimo_minuto_provisorio","a":0.0},{"n":"59","e":"clasificado","a":0.0},{"n":"53","e":"clasificado","a":8.0}],"ESC":{"pole":2.0,"serie":[5.0,4.5,4.0,3.5,3.0,2.5,2.0,1.5,1.0,0.5],"final":[40.0,37.0,34.0,31.0,30.0,29.0,28.0,27.0,26.0,25.0,24.0,23.0,22.0,21.0,20.0,19.0,18.0,17.0,16.0,15.0,14.0,13.0,12.0,11.0,10.0,9.0,8.0,7.0,6.0,5.0],"f3140":3.0,"f41":2.0},"FMT":{"TC":{"nombre":"Copa de Oro","reg":10,"copa":4,"puesto":12,"exc":1,"um":3,"bonus":8.0,"arr":15.0,"ganador":200.0,"fuente":"actc.org.ar/tc/copa (2026) — falta el deportivo 2026"},"TCP":{"nombre":"Copa de Plata","reg":10,"copa":4,"puesto":12,"exc":0,"um":3,"bonus":8.0,"arr":15.0,"ganador":200.0,"fuente":"actc.org.ar/tcp/copa (2026): 12 por puesto + 3 de último minuto"}},"ART":[["Art. 4","Mínimo de participantes","Para otorgar puntaje deben largar la final al menos 10 autos."],["Art. 5","Puntaje","Clasificación: 2 pts al mejor tiempo. Series: 5-4,5-4-3,5-3-2,5-2-1,5-1-0,5 (top 10). Final: 40-37-34-31-30… (ver tabla). Última fecha: +50%."],["Art. 46","Pruebas suspendidas","Antes del 20%: sin puntos. Entre 20% y 50%: la mitad. Después del 50%: puntaje completo."],["Art. 47","Clasificaciones empatadas","Se reparten en partes iguales los puntos del puesto empatado y de los siguientes."],["Art. 48","Desempate en el campeonato","Más primeros puestos en finales; luego más segundos, terceros y así sucesivamente; luego posiciones en series; luego mejores tiempos de clasificación."],["Copa","Copa de Oro (TC) / Plata (TCP)","Desde la fecha 11. 12 primeros de la etapa regular (+1 por excepción en 2026) y 3 de 'último minuto' (los mejores de la general no clasificados al cierre de la última fecha de la copa, sin bonus). Arranque: 15 pts al puntero tras la fecha 10 y 8 por cada victoria de la etapa regular. Última fecha +50% y +200 al ganador. El campeón debe haber ganado al menos una final en la temporada."]]};
+const $=i=>document.getElementById(i);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const nom=s=>s.replace(';',',').toLowerCase().replace(/(^|[\s,'-])([a-záéíóúñü])/g,(m,a,b)=>a+b.toUpperCase());
+const g1=x=>x==null?'':(Math.round(x*10)/10).toString().replace('.',',');
+const P=new Map(D.P.map(p=>[p.n,p]));
+const sn=n=>String(n)[0]==='~'?'—':n;
+const nm=n=>P.has(n)?nom(P.get(n).p):'Nº '+n;
+const PROX=D.prox?D.prox.n:(Math.max(...D.fechas.map(f=>f.n))+1);
+const Q=new URLSearchParams(location.search),EMB=Q.get('embed')==='1';
+if(EMB)document.documentElement.classList.add('emb');
+let S={q:'',solo:false,dd:false,inst:0,ord:0,tab:+(Q.get('tab')||0),top:99,seg:new Set(),fecha:PROX,pole:'',series:['','',''],orden:[]};
+const KEY='camp-live-'+D.cat+D.anio;
+try{const j=JSON.parse(localStorage.getItem(KEY)||'null');if(j){S.orden=j.orden||[];S.pole=j.pole||'';S.series=j.series||S.series;S.seg=new Set(j.seg||[]);S.fecha=j.fecha||PROX}}catch(e){}
+function guardar(){try{localStorage.setItem(KEY,JSON.stringify({orden:S.orden,pole:S.pole,series:S.series,seg:[...S.seg],fecha:S.fecha}))}catch(e){}}
+
+// ------------------------------------------------------------- reglamento (art. 5)
+const ptsFinal=(pos,ult)=>(pos<=30?D.ESC.final[pos-1]:pos<=40?D.ESC.f3140:D.ESC.f41)*(ult?D.rec:1);
+const ptsSerie=(pos,ult)=>(pos<=10?D.ESC.serie[pos-1]:0)*(ult?D.rec:1);
+
+// ------------------------------------------------------------- cálculo (portado de simulador.proyectar)
+function proyectar(fecha,orden,pole,series,oficial){
+ const ult=fecha>=D.total,car={};
+ const add=(n,k,v)=>{(car[n]=car[n]||{c:0,s:0,f:0})[k]+=v};
+ if(pole)add(pole,'c',D.ESC.pole*(ult?D.rec:1));
+ series.forEach(s=>s.forEach((n,i)=>{if(i<10)add(n,'s',ptsSerie(i+1,ult))}));
+ orden.forEach((n,i)=>add(n,'f',orden.length>=D.min?ptsFinal(i+1,ult):0));
+ const todos=new Set([...D.P.map(p=>p.n),...Object.keys(car)]);
+ const prim=D.reg+1;
+ const base=[...todos].map(n=>{const p=P.get(n),o={nro:n,prev:0,p1:0,p2:0,p3:0,fprev:0,v:0,vent:0,fp:{}};
+  if(p)for(const k in p.f){const f=+k,[c,s,fi]=p.f[k],pp=c+s+fi;o.fp[f]=pp;if(f>=fecha)continue;o.prev+=pp;o.fprev+=fi;
+   if(f>=prim)o.vent+=pp;const nr=fi/(f===D.total?D.rec:1);if(nr>=40){o.p1++;o.v++}else if(nr===37)o.p2++;else if(nr===34)o.p3++}
+  const c=car[n]||{c:0,s:0,f:0};o.c=c.c;o.s=c.s;o.f=c.f;o.pf=c.c+c.s+c.f;return o});
+ const ordena=(a,b)=>b.total-a.total||b.p1-a.p1||b.p2-a.p2||b.p3-a.p3||b.f-a.f;
+ const prev=base.map(o=>({nro:o.nro,total:o.prev,p1:o.p1,p2:o.p2,p3:o.p3,f:o.fprev})).sort(ordena);
+ const pp=new Map(prev.map((o,i)=>[o.nro,i+1]));
+ const G=base.map(o=>{const w=orden[0]===o.nro;return {...o,piloto:nm(o.nro),total:o.prev+o.pf,v:o.v+(w?1:0),
+  p1:o.p1+(orden[0]===o.nro?1:0),p2:o.p2+(orden[1]===o.nro?1:0),p3:o.p3+(orden[2]===o.nro?1:0),posPrev:pp.get(o.nro)}})
+  .filter(o=>o.prev>0||o.pf>0||D.C.some(c=>c.n===o.nro));
+ // Copa
+ let cop=null,campeon=null;
+ if(fecha>D.reg){
+  const cl=D.C.filter(c=>c.e==='clasificado').map(c=>{const o=G.find(x=>x.nro===c.n)||{nro:c.n,vent:0,pf:0,total:0,v:0,piloto:nm(c.n)};
+   return {nro:c.n,piloto:nm(c.n),estado:'Clasificado',arr:c.a,vent:o.vent,pf:o.pf,copa:c.a+o.vent+o.pf,total:o.total,v:o.v}});
+  const ids=new Set(cl.map(c=>c.nro));
+  const pool=G.filter(o=>!ids.has(o.nro)).sort(ordena).slice(0,D.um)
+   .map(o=>({nro:o.nro,piloto:o.piloto,estado:'Último minuto',arr:0,vent:o.vent,pf:o.pf,copa:o.vent+o.pf,total:o.total,v:o.v}));
+  cop=[...cl,...pool].sort((a,b)=>b.copa-a.copa);cop.forEach((c,i)=>{c.pos=i+1;c.puede=c.v>=1});
+  if(ult&&!oficial){campeon=cop.find(c=>c.puede)||null;if(campeon){const o=G.find(x=>x.nro===campeon.nro);if(o)o.total+=D.bonus}}}
+ G.sort(ordena);G.forEach((o,i)=>{o.pos=i+1;o.cambio=o.posPrev?o.posPrev-o.pos:0});
+ return {G,cop,campeon,ult,largan:orden.length};
+}
+
+// ------------------------------------------------------------- tablas
+function tabla(cols,filas,cls){return '<div class="scroll"><table class="'+(cls||'')+'"><thead><tr>'+cols.map((c,i)=>'<th'+(c[1]?' class="l"':'')+'>'+c[0]+'</th>').join('')+'</tr></thead><tbody>'+filas.join('')+'</tbody></table></div>'}
+const star=n=>'<button class="st nop'+(S.seg.has(n)?' on':'')+'" data-n="'+n+'" onclick="seguir(this.dataset.n)" title="Seguir piloto">'+(S.seg.has(n)?'★':'☆')+'</button>';
+function seguir(n){S.seg.has(n)?S.seg.delete(n):S.seg.add(n);guardar();draw()}
+const row=(n,tds,l)=>(S.solo&&S.seg.size&&!S.seg.has(n))?'':'<tr class="'+(S.seg.has(n)?'sg':'')+'">'+tds.map((t,i)=>'<td'+((l||[]).includes(i)?' class="l"':'')+'>'+t+'</td>').join('')+'</tr>';
+function lista(){const q=S.q.trim().toLowerCase();
+ return D.P.filter(p=>!q||(p.n+' '+p.p).toLowerCase().includes(q)).sort((a,b)=>a.p.localeCompare(b.p)).map(p=>
+  '<label class="it"><input type="checkbox" data-n="'+p.n+'"'+(S.seg.has(p.n)?' checked':'')+' onchange="seguir(this.dataset.n)"> <b>'+sn(p.n)+'</b> '+esc(nom(p.p))+'</label>').join('')||'<p class="hint">Sin resultados.</p>'}
+function ddLista(){const e=$('ddl');if(e)e.innerHTML=lista()}
+function buscador(){
+ return '<div class="bar nop" style="margin:0 0 10px"><span class="lb">Pilotos</span><details class="dd" id="dd"'+(S.dd?' open':'')+' ontoggle="S.dd=this.open"><summary>'+(S.seg.size?S.seg.size+' seleccionado'+(S.seg.size>1?'s':''):'Buscar y elegir pilotos')+'</summary>'+
+  '<div class="chips"><input type="text" placeholder="Buscar nº o nombre" value="'+esc(S.q)+'" oninput="S.q=this.value;ddLista()"><div id="ddl">'+lista()+'</div></div></details>'+
+  '<label><input type="checkbox"'+(S.solo?' checked':'')+' onchange="S.solo=this.checked;draw()"> Mostrar solo los seleccionados</label>'+
+  '<button onclick="S.seg.clear();guardar();draw()">Quitar selección</button></div>'}
+const dlt=c=>c>0?'<span class="up">▲'+c+'</span>':c<0?'<span class="dn">▼'+(-c)+'</span>':'<span class="eq0">=</span>';
+
+function vGeneral(){
+ const R=proyectar(PROX,[],'',[],1);const fs=D.fechas.map(f=>f.n);const lid=R.G[0]?R.G[0].total:0;
+ const cols=[['Pos'],['Nº'],['Piloto',1],['Vic.'],...D.fechas.map(f=>[f.n+'<br><small class="dim">'+esc(f.t.split(' ').slice(0,1)[0])+'</small>']),['Total'],['Dif.'],['']];
+ const filas=R.G.map(o=>row(o.nro,[o.pos,sn(o.nro),esc(o.piloto),o.v||'',...fs.map(f=>o.fp[f]!=null?g1(o.fp[f]):'<span class="dim">·</span>'),'<b>'+g1(o.total)+'</b>',o.pos===1?'':'−'+g1(lid-o.total),star(o.nro)],[2]));
+ return '<section><h2>Campeonato general · tras la fecha '+Math.max(...fs)+' ('+esc(D.fechas[D.fechas.length-1].t)+')</h2><p class="note">Puntos por fecha (clasificación + series + final) tomados de actc.org.ar. Desempate: art. 48 (más primeros puestos en finales, luego segundos, terceros…). ★ para seguir pilotos (queda guardado).</p>'+
+  '<div class="bar nop"><button onclick="window.print()">⬇ Exportar PDF</button></div>'+buscador()+tabla(cols,filas,'')+'</section>'}
+
+function vCopa(){
+ const R=proyectar(PROX,[],'',[],1);if(!R.cop)return '<section><p class="note">La Copa empieza en la fecha '+(D.reg+1)+'.</p></section>';
+ const fs=D.fechas.map(f=>f.n).filter(f=>f>D.reg);
+ const cols=[['Pos'],['Nº'],['Piloto',1],['Estado',1],['Arranque'],...fs.map(f=>['F'+f]),['Copa'],['Dif. con el puntero'],['Campeonato'],['']];
+ const filas=R.cop.map(c=>{const o=R.G.find(x=>x.nro===c.nro)||{fp:{}};return row(c.nro,[c.pos,sn(c.nro),esc(c.piloto),c.estado,c.arr?g1(c.arr):'—',...fs.map(f=>o.fp&&o.fp[f]!=null?g1(o.fp[f]):'·'),'<b>'+g1(c.copa)+'</b>',c.pos===1?'—':'−'+g1(R.cop[0].copa-c.copa),g1(c.total),star(c.nro)],[2,3])});
+ const F=D.FMT[D.cat];
+ return '<section><h2>'+esc(D.copaNombre)+' · tras la fecha '+Math.max(...D.fechas.map(f=>f.n))+'</h2><p class="note">'+F.puesto+(F.exc?' + '+F.exc+' por excepción':'')+' clasificados por puesto al cierre de la fecha '+F.reg+' ('+F.arr+' pts al puntero del campeonato y +'+F.bonus+' por victoria de la etapa regular) y '+F.um+' de «último minuto» (los mejores de la general que no clasificaron, sin bonus). Última fecha +50% y +'+F.ganador+' al ganador de la Copa; el campeón debe haber ganado al menos una final en la temporada.</p>'+
+  '<div class="bar nop"><button onclick="window.print()">⬇ Exportar PDF</button></div>'+buscador()+tabla(cols,filas,'')+'</section>'}
+
+function vPuntaje(){
+ const E=D.ESC,f=x=>g1(x),f15=x=>g1(x*D.rec),fil=[];
+ for(let i=1;i<=10;i++)fil.push('<tr><td>'+i+'º</td><td>'+(i===1?f(E.pole):'—')+'</td><td>'+f(E.serie[i-1])+'</td><td>'+f(E.final[i-1])+'</td><td class="dim">'+(i===1?f15(E.pole):'—')+' / '+f15(E.serie[i-1])+' / '+f15(E.final[i-1])+'</td></tr>');
+ for(let i=11;i<=30;i++)fil.push('<tr><td>'+i+'º</td><td>—</td><td>—</td><td>'+f(E.final[i-1])+'</td><td class="dim">— / — / '+f15(E.final[i-1])+'</td></tr>');
+ fil.push('<tr><td>31º al 40º</td><td>—</td><td>—</td><td>'+f(E.f3140)+'</td><td class="dim">— / — / '+f15(E.f3140)+'</td></tr>');
+ fil.push('<tr><td>41º al último</td><td>—</td><td>—</td><td>'+f(E.f41)+'</td><td class="dim">— / — / '+f15(E.f41)+'</td></tr>');
+ const t1=tabla([['Puesto'],['Clasificación'],['Serie'],['Final'],['Última fecha (+50%)<br><small>clasif. / serie / final</small>']],fil,'pts');
+ const F=D.FMT,fc=(k,fn)=>'<tr><td>'+k+'</td><td>'+fn(F.TC)+'</td><td>'+fn(F.TCP)+'</td></tr>';
+ const t2=tabla([['Copa'],['TC · '+esc(F.TC.nombre)],['TCP · '+esc(F.TCP.nombre)]],[
+  fc('Fechas de etapa regular',x=>x.reg),fc('Fechas de la Copa',x=>x.copa+' (fechas '+(x.reg+1)+' a '+(x.reg+x.copa)+')'),
+  fc('Clasificados por puesto',x=>x.puesto+(x.exc?' + '+x.exc+' por excepción':'')),fc('«Último minuto»',x=>x.um),
+  fc('Puntos de arranque al puntero',x=>x.arr),fc('Bonus por victoria de la etapa regular',x=>'+'+x.bonus),
+  fc('Última fecha',x=>'+50% de puntos y +'+x.ganador+' al ganador de la Copa'),fc('Fuente',x=>'<span class="dim">'+esc(x.fuente)+'</span>')],'pts');
+ const t3=tabla([['Artículo'],['Tema',1],['Regla',1]],D.ART.map(a=>'<tr><td>'+esc(a[0])+'</td><td class="l">'+esc(a[1])+'</td><td class="l">'+esc(a[2])+'</td></tr>'),'');
+ return '<section><h2>Puntos por instancia del fin de semana · TC y TC Pista</h2><p class="note">Escala idéntica en TC y TCP (art. 5). Clasificación: 2 pts al mejor tiempo. Series: top 10. Final: todos los puestos. Mínimo '+D.min+' autos en la final para otorgar puntaje. '+
+  '<b>Ojo:</b> el Reglamento Deportivo 2026 no está en la carpeta (el PDF con ese nombre es el Técnico); se usa el 2025 contrastado con los puntos reales 2026 de actc.org.ar.</p>'+t1+'</section>'+
+  '<section><h2>Copa de Oro (TC) y Copa de Plata (TCP) · formato 2026</h2>'+t2+'</section><section><h2>Artículos que afectan el puntaje</h2>'+t3+'</section>'}
+
+// ------------------------------------------------------------- puntos ganados por fecha
+const INST=[['Total'],['Clasificación'],['Series'],['Final']];
+function setInst(i){S.inst=+i;draw()}
+function setOrd(v){S.ord=+v;draw()}
+function vFechas(){
+ const R=proyectar(PROX,[],'',[],1),fs=D.fechas.map(f=>f.n);
+ const val=(o,f)=>{const a=(P.get(o.nro)||{f:{}}).f[f];return a?(S.inst===0?a[0]+a[1]+a[2]:a[S.inst-1]):null};
+ let G=[...R.G];if(S.ord)G.sort((a,b)=>(val(b,S.ord)??-1)-(val(a,S.ord)??-1));
+ const mx={},lid={};fs.forEach(f=>{let m=-1;R.G.forEach(o=>{const v=val(o,f);if(v!=null&&v>m){m=v;lid[f]=[o]}else if(v!=null&&v===m)lid[f].push(o)});mx[f]=m});
+ const tot=o=>fs.reduce((a,f)=>a+(val(o,f)||0),0);
+ const celda=(o,f)=>{const v=val(o,f);if(v==null)return '<span class="dim">·</span>';const w=mx[f]>0?Math.round(v/mx[f]*55):0;
+  return '<span style="display:block;padding:1px 4px;border-radius:4px;background:color-mix(in srgb,var(--gold) '+w+'%,transparent)'+(v===mx[f]&&v>0?';font-weight:700;outline:1.5px solid var(--gold)':'')+'">'+g1(v)+'</span>'};
+ const cols=[['Pos'],['Nº'],['Piloto',1],...D.fechas.map(f=>[f.n+'<br><small class="dim">'+esc(f.t.split(' ').slice(1).join(' '))+'</small>']),['Total'],['Prom.'],['']];
+ const filas=G.map((o,i)=>{const t=tot(o),n=fs.filter(f=>val(o,f)!=null).length;
+  return row(o.nro,[S.ord?i+1:o.pos,sn(o.nro),esc(o.piloto),...fs.map(f=>celda(o,f)),'<b>'+g1(t)+'</b>',n?g1(t/n):'·',star(o.nro)],[2])});
+ const gan=tabla([['Fecha'],['Carrera',1],['Más puntos',1],['Puntos']],fs.map(f=>'<tr><td>'+f+'</td><td class="l">'+esc(D.fechas.find(x=>x.n===f).t)+'</td><td class="l">'+(lid[f]||[]).map(o=>esc(o.piloto)+' (Nº '+sn(o.nro)+')').join(' / ')+'</td><td><b>'+g1(mx[f])+'</b></td></tr>'),'');
+ return '<section><h2>Puntos ganados por fecha · '+INST[S.inst][0]+'</h2><div class="bar nop"><span class="blbl">Instancia</span><div class="seg">'+
+  INST.map((x,i)=>'<button class="'+(i===S.inst?'on':'')+'" onclick="setInst('+i+')">'+x[0]+'</button>').join('')+'</div>'+
+  '<label>Ordenar por <select onchange="setOrd(this.value)"><option value="0">Campeonato</option>'+fs.map(f=>'<option value="'+f+'"'+(S.ord===f?' selected':'')+'>Puntos de la fecha '+f+'</option>').join('')+'</select></label>'+
+  '<button onclick="window.print()">⬇ Exportar PDF</button></div>'+buscador()+
+  '<p class="note">Puntos que sumó cada piloto en cada fecha (la intensidad del color es proporcional al máximo de la fecha; recuadro = quien más puntos hizo). Los 4 filtros separan clasificación, series y final.</p>'+
+  tabla(cols,filas,'')+'</section><section><h2>Quién sumó más en cada fecha · '+INST[S.inst][0]+'</h2>'+gan+'</section>'}
+
+// ------------------------------------------------------------- en vivo
+const nros=s=>[...new Set(String(s).split(/[^0-9]+/).filter(Boolean))];
+function setOrden(a){S.orden=a;guardar();draw()}
+function addP(n){if(!S.orden.includes(n)){S.orden.push(n);guardar();draw()}}
+function quitar(i){S.orden.splice(i,1);guardar();draw()}
+function mover(i,j){j=Math.max(0,Math.min(S.orden.length-1,j));if(i===j)return;const [x]=S.orden.splice(i,1);S.orden.splice(j,0,x);guardar();draw()}
+function pegar(v){setOrden(nros(v))}
+function setPole(v){S.pole=nros(v)[0]||'';guardar();draw()}
+function setSerie(i,v){S.series[i]=nros(v).join(' ');guardar();draw()}
+function masSerie(){S.series.push('');guardar();draw()}
+function reiniciar(){if(confirm('¿Borrar el orden de la final, la pole y las series?')){S.orden=[];S.pole='';S.series=S.series.map(()=>'');guardar();draw()}}
+function selFecha(v){S.fecha=+v;guardar();draw()}
+function setTop(v){S.top=+v;draw()}
+function eAgregar(e){if(e.key!=='Enter')return;const v=nros(e.target.value);let a=[...S.orden];v.forEach(n=>{if(!a.includes(n))a.push(n)});setOrden(a)}
+function vVivo(){
+ const R=proyectar(S.fecha,S.orden,S.pole,S.series.map(nros));
+ const falta=D.P.filter(p=>/^[0-9]/.test(p.n)&&!S.orden.includes(p.n)).sort((a,b)=>a.p.localeCompare(b.p));
+ const opF=[...D.fechas.map(f=>[f.n,'Fecha '+f.n+' · '+f.t+' (ya corrida)']),...(D.prox?[[D.prox.n,'Fecha '+D.prox.n+' · '+D.prox.t+' (por correr)']]:[])].sort((a,b)=>a[0]-b[0]);
+ const ord=S.orden.map((n,i)=>'<div class="r"><b>'+(i+1)+'º</b><span>'+n+' · '+esc(nm(n))+' <span class="dim">'+g1(R.largan>=D.min?ptsFinal(i+1,R.ult):0)+' pts</span></span>'+
+  '<span><input type="number" min="1" max="'+S.orden.length+'" value="'+(i+1)+'" onchange="mover('+i+',this.value-1)" title="Mover a esta posición"><button onclick="mover('+i+','+(i-1)+')">▲</button><button onclick="mover('+i+','+(i+1)+')">▼</button></span><button onclick="quitar('+i+')">✕</button></div>').join('');
+ const aviso=S.orden.length&&S.orden.length<D.min?'<p class="note" style="color:#ef6b6b">Con menos de '+D.min+' autos en la final no se otorgan puntos de la final (art. 4).</p>':'';
+ const top=S.top;const gf=R.G.filter((o,i)=>i<top||S.seg.has(o.nro));
+ const filasG=gf.map(o=>row(o.nro,[o.pos,dlt(o.cambio),sn(o.nro),esc(o.piloto),g1(o.prev),o.pf?'+'+g1(o.pf):'<span class="dim">·</span>','<b>'+g1(o.total)+'</b>',o.pos===1?'':'−'+g1(R.G[0].total-o.total),star(o.nro)],[3]));
+ let copaH='<p class="note">La Copa empieza en la fecha '+(D.reg+1)+'.</p>';
+ if(R.cop)copaH=tabla([['Pos'],['Nº'],['Piloto',1],['Estado',1],['+Fecha'],['Copa'],['Dif.'],['Camp.'],['']],R.cop.map(c=>row(c.nro,[c.pos,sn(c.nro),esc(c.piloto),c.estado+(R.ult&&!c.puede?' <span class="dim">(sin victoria)</span>':''),c.pf?'+'+g1(c.pf):'·','<b>'+g1(c.copa)+'</b>',c.pos===1?'':'−'+g1(R.cop[0].copa-c.copa),g1(c.total),star(c.nro)],[2,3])),'');
+ const camp=R.campeon?'<div class="camp">🏆 <b>Campeón proyectado:</b> '+esc(nm(R.campeon.nro))+' (Nº '+R.campeon.nro+') · Copa '+g1(R.campeon.copa)+' pts · +'+D.bonus+' al campeonato</div>':(R.ult?'<div class="camp">Última fecha: sin campeón proyectado todavía (nadie elegible).</div>':'');
+ return '<section>'+buscador()+'<div class="bar"><label>Fecha <select onchange="selFecha(this.value)">'+opF.map(o=>'<option value="'+o[0]+'"'+(o[0]===S.fecha?' selected':'')+'>'+esc(o[1])+'</option>').join('')+'</select></label>'+
+  '<label>Mostrar <select onchange="setTop(this.value)">'+[10,15,20,99].map(n=>'<option value="'+n+'"'+(n===S.top?' selected':'')+'>'+(n===99?'Todos':'Top '+n)+'</option>').join('')+'</select></label>'+
+  '<button onclick="reiniciar()">Reiniciar</button><span class="hint">'+(R.ult?'Última fecha: +50% de puntos y +'+D.bonus+' al ganador de la Copa.':'Se guarda solo en este dispositivo.')+'</span></div></section>'+
+  '<div class="grid2"><section><h2>Carrera en vivo</h2>'+
+  '<div class="bar"><label>Pole (nº) <input style="width:60px" value="'+esc(S.pole)+'" onchange="setPole(this.value)"></label></div>'+
+  '<div class="hint" style="margin-top:6px">Series (orden de llegada, solo los 10 primeros suman)</div>'+S.series.map((s,i)=>'<div class="bar" style="margin:3px 0"><label>Serie '+(i+1)+' <input style="width:260px;max-width:60vw" value="'+esc(s)+'" placeholder="nº nº nº …" onchange="setSerie('+i+',this.value)"></label></div>').join('')+'<button onclick="masSerie()">+ serie</button>'+
+  '<h3 style="margin:12px 0 4px">Orden de la final</h3>'+
+  '<div class="bar"><input id="add" placeholder="Agregar nº (Enter)" style="width:150px" onkeydown="eAgregar(event)"><span class="hint">o tocá un piloto abajo</span></div>'+
+  '<div class="pl">'+falta.map(p=>'<button data-n="'+p.n+'" onclick="addP(this.dataset.n)">'+p.n+' '+esc(nom(p.p).split(',')[0])+'</button>').join('')+'</div>'+
+  '<textarea placeholder="Pegá el orden completo: 1 256 101 11 …" onchange="pegar(this.value)">'+S.orden.join(' ')+'</textarea>'+aviso+
+  '<div class="ord">'+(ord||'<p class="hint">Todavía no cargaste el orden. Agregá los pilotos del 1º al último; podés cambiar posiciones con ▲▼ o escribiendo la posición nueva.</p>')+'</div></section>'+
+  '<section><h2>Campeonato proyectado</h2>'+camp+tabla([['Pos'],[''],['Nº'],['Piloto',1],['Previo'],['+Fecha'],['Total'],['Dif.'],['']],filasG,'')+
+  '<h2 style="margin-top:16px">'+esc(D.copaNombre)+' proyectada</h2>'+copaH+'</section></div>'}
+
+// ------------------------------------------------------------- pestañas
+const TABS=[['Campeonato general',vGeneral],['Copa de '+(D.cat==='TC'?'Oro':'Plata'),vCopa],['Puntos por fecha',vFechas],['Puntaje por instancia',vPuntaje],['🔴 En vivo',vVivo]];
+function draw(){
+ $('tabs').innerHTML=TABS.map((t,i)=>'<button class="'+(i===S.tab?'on':'')+'" onclick="S.tab='+i+';draw()">'+t[0]+'</button>').join('');
+ const y=window.scrollY;$('panel').innerHTML=TABS[S.tab][1]();window.scrollTo(0,y);if(EMB)avisar()}
+function avisar(){try{parent.postMessage({camH:document.documentElement.scrollHeight},'*')}catch(e){}}
+if(EMB&&window.ResizeObserver)new ResizeObserver(avisar).observe(document.body);
+draw();
+</script></body></html>
