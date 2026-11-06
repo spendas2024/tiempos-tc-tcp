@@ -1,0 +1,148 @@
+<!doctype html><html lang="es" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><script>(function(){var t=null;try{t=localStorage.getItem('tema')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t})()</script><title>2026 01. Calafate · 3º Serie</title><style>@font-face{font-family:Inter;font-weight:400;src:url(../fuentes/inter-400.woff2) format('woff2')}
+@font-face{font-family:Inter;font-weight:700;src:url(../fuentes/inter-700.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-weight:500;src:url(../fuentes/jbmono-500.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-weight:700;src:url(../fuentes/jbmono-700.woff2) format('woff2')}
+
+:root,html[data-theme=dark]{--bg:#0b1a2e;--card:#112440;--line:#1d3a5f;--tx:#e6edf6;--mut:#8aa0bd;--gold:#d4a84b;--blue:#4da3ff;
+  --head:#091524;--nav:#0d1f36;--hover:#17305a;--ctl:#17305a;--on:#0b1a2e}
+html[data-theme=light]{--bg:#f2f5f9;--card:#ffffff;--line:#d9e0ea;--tx:#141922;--mut:#6b7686;--gold:#b86e00;--blue:#1f6fd1;
+  --head:#ffffff;--nav:#eaeff6;--hover:#e8eef8;--ctl:#e6ecf4;--on:#ffffff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.45 Inter,'Segoe UI',system-ui,sans-serif}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+header{padding:16px 24px;border-bottom:1px solid var(--line);background:var(--head);display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+header h1{margin:0;font-size:22px;letter-spacing:.3px;font-weight:700}header h1 span{color:var(--gold)}
+header .sub{color:var(--mut);margin-top:4px;font-size:13px}
+.tg{white-space:nowrap}
+nav{display:flex;flex-wrap:wrap;gap:6px;padding:10px 24px;border-bottom:1px solid var(--line);background:var(--nav)}
+nav a{padding:4px 10px;border:1px solid var(--line);border-radius:6px;color:var(--tx);font-size:12px}
+nav a.on{background:var(--gold);color:var(--on);border-color:var(--gold);font-weight:700}
+main{padding:18px 24px;max-width:1400px;margin:auto}
+section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:18px}
+h2{margin:0 0 10px;font-size:13px;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold)}
+.note{color:var(--mut);font-size:12px;margin:0 0 10px}
+table{border-collapse:collapse;width:100%;font-size:12.5px}
+th,td{padding:4px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+td{font-family:'JetBrains Mono',Consolas,monospace;font-size:12px}
+th{color:var(--mut);font-weight:600;position:sticky;top:0;background:var(--card)}
+td.l,th.l{text-align:left}td.l{font-family:Inter,'Segoe UI',sans-serif;font-size:12.5px}tr:hover td{background:var(--hover)}
+.scroll{max-height:560px;overflow:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(520px,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:14px}
+.card h3{margin:0;font-size:16px}.card .lug{color:var(--mut);font-size:12px;margin-bottom:8px}
+.row{display:flex;gap:8px;align-items:center;padding:5px 0;border-top:1px solid var(--line)}
+.row b{width:150px;color:var(--mut);font-size:11px;letter-spacing:1px;text-transform:uppercase}
+.pill{padding:2px 9px;border:1px solid var(--line);border-radius:6px;font-size:12px;color:var(--tx)}
+.ctl{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:8px;color:var(--mut)}
+select,input{background:var(--ctl);color:var(--tx);border:1px solid var(--line);border-radius:6px;padding:3px 6px;font:inherit;max-width:100%}
+#met{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+button{background:var(--ctl);color:var(--tx);border:1px solid var(--line);border-radius:6px;padding:3px 10px;cursor:pointer;font:inherit}
+.sc .tw{max-height:560px;overflow-y:auto}
+.seg{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.seg button{padding:6px 16px;font-weight:700;font-size:14px}
+.seg button.on{background:var(--gold);color:var(--on);border-color:var(--gold)}
+.etq{color:var(--mut);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin:4px 0 6px;font-weight:600}
+details.pista{background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:10px}
+details.pista summary{cursor:pointer;padding:12px 16px;display:flex;gap:12px;align-items:baseline;list-style:none}
+details.pista summary::-webkit-details-marker{display:none}
+details.pista summary b{font-size:16px}details.pista summary span{color:var(--mut);font-size:12px}
+details.pista summary::before{content:'▸';color:var(--gold)}details.pista[open] summary::before{content:'▾'}
+details.pista .cuerpo{padding:0 16px 12px}
+.act{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+.vio{background:#7c3aed;color:#fff!important;border-radius:3px}
+.pg{background:#16a34a;color:#fff!important;border-radius:3px;font-weight:700}
+.sc th,.sc td{text-align:left}.sc td.p{font-family:Inter,'Segoe UI',sans-serif;font-size:13px}
+html[data-theme=dark] .sc .sx0{color:#f5c518}
+html[data-theme=dark] .sc .sx1{color:#ff8a3d}
+html[data-theme=dark] .sc .sx2{color:#4da3ff}
+html[data-theme=dark] .sc .sx3{color:#4cc38a}
+html[data-theme=dark] .sc .sx4{color:#d27bff}
+html[data-theme=dark] .sc .mc-C{color:#ff6b6b}
+html[data-theme=dark] .sc .mc-M{color:#5aa9ff}
+html[data-theme=dark] .sc .mc-Y{color:#3cd6c8}
+html[data-theme=dark] .sc .mc-B{color:#4cc38a}
+html[data-theme=dark] .sc .mc-G{color:#b388ff}
+html[data-theme=dark] .sc .mc-T{color:#ffa94d}
+html[data-theme=dark] .sc .mc-W{color:#f0b429}
+
+html[data-theme=dark] .sc{background:#11161f;border:1px solid #222b3a;border-radius:10px;padding:12px 14px;color:#e6edf3;
+    font-family:Inter,'Segoe UI',sans-serif;margin-bottom:12px}
+html[data-theme=dark] .sc .num,.sc td.t,.sc .sc-pct{font-family:'JetBrains Mono',Consolas,monospace;font-variant-numeric:tabular-nums}
+html[data-theme=dark] .sc-head{display:flex;align-items:center;gap:14px;padding-bottom:10px;border-bottom:1px solid #222b3a}
+html[data-theme=dark] .sc-id{font-size:34px;font-weight:800;line-height:1}
+html[data-theme=dark] .sc-dom{flex:1;min-width:0}
+html[data-theme=dark] .sc-lbl{font-size:10px;letter-spacing:1.4px;color:#7d8a9c;font-weight:600}
+html[data-theme=dark] .sc-name{font-size:15px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+html[data-theme=dark] .sc-best{font-size:12px;color:#ff9a3c;font-weight:600}
+html[data-theme=dark] .sc-peso{text-align:right}
+html[data-theme=dark] .sc-pct{font-size:24px;font-weight:700;color:#a3e635}
+html[data-theme=dark] .sc table{width:100%;border-collapse:collapse;margin-top:6px;font-size:13px;table-layout:fixed}
+html[data-theme=dark] .sc td.p{overflow:hidden;text-overflow:ellipsis}
+html[data-theme=dark] .sc th{color:#7d8a9c;font-size:10px;letter-spacing:1.2px;font-weight:600;text-align:left;padding:6px 6px}
+html[data-theme=dark] .sc th{background:#11161f}
+html[data-theme=dark] .sc td{padding:5px 6px;border-bottom:1px solid #222b3a;white-space:nowrap}
+html[data-theme=dark] .sc tr.hi td{background:rgba(255,154,60,.16);color:#ff9a3c;font-weight:700}
+html[data-theme=dark] .sc tr.hi td:first-child{box-shadow:inset 3px 0 0 #ff9a3c}
+html[data-theme=dark] .sc .pos{display:inline-block;min-width:24px;text-align:center;border-radius:5px;background:#161c27;padding:1px 6px;font-weight:700;
+    font-size:12px;color:#7d8a9c}
+html[data-theme=dark] .sc tr.hi .pos{background:#ff9a3c;color:#fff}
+html[data-theme=dark] .sc .tb{display:inline-block;min-width:34px;text-align:center;border-radius:5px;background:#161c27;padding:1px 6px;font-size:11px;
+    font-weight:700;color:#7d8a9c}
+html[data-theme=dark] .sc td.t{font-weight:600;color:#a3e635}
+html[data-theme=dark] .sc td.t.best{background:#7c3aed;color:#fff;border-radius:3px}
+html[data-theme=dark] .sc td.d{color:#ff6b6b;text-align:right;font-family:'JetBrains Mono',Consolas,monospace}
+html[data-theme=dark] .sc td.m{font-weight:800;text-align:center}
+html[data-theme=dark] .sc .ref{color:#7d8a9c}
+
+html[data-theme=light] .sc .sx0{color:#b88a00}
+html[data-theme=light] .sc .sx1{color:#e0661a}
+html[data-theme=light] .sc .sx2{color:#1f6fd1}
+html[data-theme=light] .sc .sx3{color:#16965f}
+html[data-theme=light] .sc .sx4{color:#9333ea}
+html[data-theme=light] .sc .mc-C{color:#dc2626}
+html[data-theme=light] .sc .mc-M{color:#1f6fd1}
+html[data-theme=light] .sc .mc-Y{color:#0d9488}
+html[data-theme=light] .sc .mc-B{color:#16965f}
+html[data-theme=light] .sc .mc-G{color:#7c3aed}
+html[data-theme=light] .sc .mc-T{color:#d9650b}
+html[data-theme=light] .sc .mc-W{color:#b88a00}
+
+html[data-theme=light] .sc{background:#ffffff;border:1px solid #d9e0ea;border-radius:10px;padding:12px 14px;color:#141922;
+    font-family:Inter,'Segoe UI',sans-serif;margin-bottom:12px}
+html[data-theme=light] .sc .num,.sc td.t,.sc .sc-pct{font-family:'JetBrains Mono',Consolas,monospace;font-variant-numeric:tabular-nums}
+html[data-theme=light] .sc-head{display:flex;align-items:center;gap:14px;padding-bottom:10px;border-bottom:1px solid #d9e0ea}
+html[data-theme=light] .sc-id{font-size:34px;font-weight:800;line-height:1}
+html[data-theme=light] .sc-dom{flex:1;min-width:0}
+html[data-theme=light] .sc-lbl{font-size:10px;letter-spacing:1.4px;color:#6b7686;font-weight:600}
+html[data-theme=light] .sc-name{font-size:15px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+html[data-theme=light] .sc-best{font-size:12px;color:#d9650b;font-weight:600}
+html[data-theme=light] .sc-peso{text-align:right}
+html[data-theme=light] .sc-pct{font-size:24px;font-weight:700;color:#15803d}
+html[data-theme=light] .sc table{width:100%;border-collapse:collapse;margin-top:6px;font-size:13px;table-layout:fixed}
+html[data-theme=light] .sc td.p{overflow:hidden;text-overflow:ellipsis}
+html[data-theme=light] .sc th{color:#6b7686;font-size:10px;letter-spacing:1.2px;font-weight:600;text-align:left;padding:6px 6px}
+html[data-theme=light] .sc th{background:#ffffff}
+html[data-theme=light] .sc td{padding:5px 6px;border-bottom:1px solid #d9e0ea;white-space:nowrap}
+html[data-theme=light] .sc tr.hi td{background:rgba(217,101,11,.12);color:#d9650b;font-weight:700}
+html[data-theme=light] .sc tr.hi td:first-child{box-shadow:inset 3px 0 0 #d9650b}
+html[data-theme=light] .sc .pos{display:inline-block;min-width:24px;text-align:center;border-radius:5px;background:#f3f6fa;padding:1px 6px;font-weight:700;
+    font-size:12px;color:#6b7686}
+html[data-theme=light] .sc tr.hi .pos{background:#d9650b;color:#fff}
+html[data-theme=light] .sc .tb{display:inline-block;min-width:34px;text-align:center;border-radius:5px;background:#f3f6fa;padding:1px 6px;font-size:11px;
+    font-weight:700;color:#6b7686}
+html[data-theme=light] .sc td.t{font-weight:600;color:#15803d}
+html[data-theme=light] .sc td.t.best{background:#7c3aed;color:#fff;border-radius:3px}
+html[data-theme=light] .sc td.d{color:#dc2626;text-align:right;font-family:'JetBrains Mono',Consolas,monospace}
+html[data-theme=light] .sc td.m{font-weight:800;text-align:center}
+html[data-theme=light] .sc .ref{color:#6b7686}
+</style><script src="../plotly.min.js"></script></head><body><header><div><h1>2026 01. Calafate · <span>3º Serie</span></h1><div class="sub">Turismo Carretera</div></div><button class="tg" onclick="cambiarTema()" title="Cambiar entre modo claro y oscuro">◐ Claro / oscuro</button></header><nav><a class="" href="../index.html">Índice</a><a class="" href="1o-entrenamiento.html">1º Entrenamiento</a><a class="" href="2o-entrenamiento.html">2º Entrenamiento</a><a class="" href="3o-entrenamiento.html">3º Entrenamiento</a><a class="" href="1o-serie.html">1º Serie</a><a class="" href="2o-serie.html">2º Serie</a><a class="on" href="3o-serie.html">3º Serie</a><a class="" href="sab-14-02-15-55-00-16-03-00-1er-cuarto-2085-243.html">[Sáb 14/02] 15:55:00-16:03:00 1er Cuarto - 2085 - 243</a></nav><main><section id="clasificacion"><h2>Clasificación</h2><p class="note">Clasificación oficial del PDF de la categoría.</p><div class="act"><button onclick="csv('t-clasif','clasificacion_3o-serie')">⬇ Descargar planilla (CSV)</button></div><div class="scroll"><table id="t-clasif"><thead><tr><th class="">Pos</th><th class="">Nº</th><th class="l">Piloto</th><th class="l">Marca</th><th class="">Vtas</th><th class="">Tiempo total</th><th class="">Dif</th></tr></thead><tbody><tr><td class="">5</td><td class="">85</td><td class="l ">Ricardo Risatti</td><td class="l ">S/D</td><td class="">5</td><td class="">6:46.779</td><td class="">+216.028</td></tr><tr><td class="">6</td><td class="">147</td><td class="l ">Marco Dianda</td><td class="l ">S/D</td><td class="">5</td><td class="">6:48.247</td><td class="">+217.496</td></tr><tr><td class="">7</td><td class="">122</td><td class="l ">Andres Jakos</td><td class="l ">S/D</td><td class="">4</td><td class="">6:49.988</td><td class="">+219.237</td></tr><tr><td class="">8</td><td class="">116</td><td class="l ">Kevin Candela</td><td class="l ">S/D</td><td class="">5</td><td class="">6:50.078</td><td class="">+219.327</td></tr><tr><td class="">9</td><td class="">256</td><td class="l ">Otto Fritzler</td><td class="l ">S/D</td><td class="">5</td><td class="">6:51.216</td><td class="">+220.465</td></tr><tr><td class="">10</td><td class="">133</td><td class="l ">Valentin Aguirre</td><td class="l ">S/D</td><td class="">5</td><td class="">6:57.248</td><td class="">+226.497</td></tr><tr><td class="">11</td><td class="">123</td><td class="l ">Martin Vazquez</td><td class="l ">S/D</td><td class="">5</td><td class="">6:58.384</td><td class="">+227.633</td></tr><tr><td class="">12</td><td class="">72</td><td class="l ">Martin Serrano</td><td class="l ">S/D</td><td class="">5</td><td class="">6:59.381</td><td class="">+228.630</td></tr><tr><td class="">13</td><td class="">5</td><td class="l ">Marcelo Agrelo</td><td class="l ">S/D</td><td class="">5</td><td class="">6:59.861</td><td class="">+229.110</td></tr><tr><td class="">14</td><td class="">77</td><td class="l ">Augusto Carinelli</td><td class="l ">S/D</td><td class="">5</td><td class="">7:02.554</td><td class="">+231.803</td></tr><tr><td class="">15</td><td class="">57</td><td class="l ">Juan Pablo Gianini</td><td class="l ">S/D</td><td class="">5</td><td class="">7:09.112</td><td class="">+238.361</td></tr><tr><td class="">16</td><td class="">96</td><td class="l ">Juan Cruz Benvenutti</td><td class="l ">S/D</td><td class="">5</td><td class="">7:29.514</td><td class="">+258.763</td></tr><tr><td class="">17</td><td class="">4</td><td class="l ">German Todino</td><td class="l ">S/D</td><td class="">5</td><td class="">7:29.515</td><td class="">+258.764</td></tr><tr><td class="">18</td><td class="">29</td><td class="l ">Elio Craparo</td><td class="l ">S/D</td><td class="">3</td><td class="">3:10.751</td><td class=""></td></tr></tbody></table></div></section></main><script>
+function recolorear(){if(!window.Plotly)return;var d=document.documentElement.dataset.theme==='dark',c=d?'#e6edf6':'#141922',g=d?'#1d3a5f':'#d9e0ea';
+ document.querySelectorAll('.js-plotly-plot').forEach(function(gd){if(!gd.layout)return;var u={'font.color':c};
+  Object.keys(gd.layout).forEach(function(k){if(/^(x|y)axis\d*$/.test(k)){u[k+'.gridcolor']=g;u[k+'.zerolinecolor']=g}});Plotly.relayout(gd,u)})}
+function cambiarTema(){var t=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=t;
+ try{localStorage.setItem('tema',t)}catch(e){}recolorear()}
+function csv(id,nombre){var f=[];document.querySelectorAll('#'+id+' tr').forEach(function(tr){f.push([].map.call(tr.children,function(c){
+ return '"'+c.textContent.replace(/"/g,'""')+'"'}).join(';'))});var b=new Blob(['\ufeff'+f.join('\n')],{type:'text/csv;charset=utf-8'});
+ var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=nombre+'.csv';a.click()}
+window.addEventListener('load',function(){if(document.documentElement.dataset.theme==='light')recolorear()});
+</script></body></html>
